@@ -10,3 +10,9 @@ Grupo de Trabajo
 - Victor Andres Villa Vila         Código 201121241
 - Luis Rodolfo Almandoz Hijar      Código 201220554
 - Julio Cesar Ponce Palacios       Código 201222545
+
+Links
+
+- Google Docs
+
+https://docs.google.com/spreadsheet/ccc?key=0AoAsSvoNZyZtdGdJbTV5c1hJc0RDNTRPLXVrMDFsQVE#gid=0
