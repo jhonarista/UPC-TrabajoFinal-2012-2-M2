@@ -12,9 +12,9 @@ public class AdminCliente {
     public ArrayList<Cliente> datos = new ArrayList<Cliente>();
     
    public ArrayList<Cliente> tablaDeClientes() {
-        this.datos.add(new Cliente("Hernan", "Gonzales", "Pardo", "hgonzales@gmail.com", "75687692", "3852312", "23/02/2012", "no"));
-        this.datos.add(new Cliente("Daniel", "Pastor", "Paredes", "dpastor@gmail.com", "74378343", "2643768", "19/04/2012", "yes"));
-        this.datos.add(new Cliente("Luis", "Angulo", "Mesa", "langulo@gmail.com", "59038572", "2258849", "12/06/2012", "no"));
+        this.datos.add(new Cliente("Jhon", "Arista", "Apolinario", "jhonarista@gmail.com", "75687692", "3852312", "23/02/2012", "no"));
+        this.datos.add(new Cliente("Victor", "Villa", "Vila", "vvilla@gmail.com", "74378343", "2643768", "19/04/2012", "yes"));
+        this.datos.add(new Cliente("Juan", "Perez", "Mesa", "jperez@gmail.com", "59038572", "2258849", "12/06/2012", "no"));
         return datos;
     }
     
