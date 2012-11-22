@@ -3,13 +3,11 @@
  * and open the template in the editor.
  */
 
+import Admin.AdminCliente;
 import junit.framework.Assert;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+
 
 /**
  *
@@ -19,19 +17,19 @@ public class AdminClienteTest {
     
     AdminCliente admCliente = new AdminCliente();
     
-    
+  
     @Test
-    public void validarElFuncionamientoDelBotonBuscarPorNombre(){
+    public void validarElFuncionamientoPorNombre(){
     
-        String validar = admCliente.buscarClientePorNombre("Luis");
+        String validar = admCliente.buscarClientePorNombre("Hernan");
         System.out.println(validar);
-        Assert.assertEquals("Luis", validar);
+        Assert.assertEquals("Hernan", validar);
     }
     
+ 
   
-   
      @Test
-    public void validarElFuncionamientoDelBotonBuscarPorDNI(){
+    public void validarElFuncionamientoPorDNI(){
     
        
         String validar = admCliente.buscarClientePorDNI("59038572");

@@ -4,101 +4,96 @@ import java.util.Date;
 
 public class Cliente {
     
-    private Long codigo;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String nombre;
-    private String email;
-    private String dni;
+     
+    private String name;
+    private String surname1;
+    private String surname2;
+    private String mail;
+    private String DNI;
     private String telefono;
-    private Date fechaDeContacto;
-    private Date fechaDePase;
+    private String contact_date;
+    private String transaccion;
+    
+    public Cliente (String name, String surname1, String surname2, String mail, String DNI, String telefono, String contact_date, String transaccion) {
+        this.name = name;
+        this.surname1 = surname1;
+        this.surname2 = surname2;
+        this.mail = mail;
+        this.DNI = DNI;
+        this.telefono = telefono;
+        this.contact_date = contact_date;
+        this.transaccion = transaccion;
+    }
 
     public Cliente() {
     }
+    
+    
 
-    public Cliente(Long codigo, String apellidoPaterno, String apellidoMaterno, String nombre, String email, String dni, String telefono, Date fechaDeContacto, Date fechaDePase) {
-        this.codigo = codigo;
-        this.apellidoPaterno = apellidoPaterno;
-        this.apellidoMaterno = apellidoMaterno;
-        this.nombre = nombre;
-        this.email = email;
-        this.dni = dni;
-        this.telefono = telefono;
-        this.fechaDeContacto = fechaDeContacto;
-        this.fechaDePase = fechaDePase;
+    public String getDNI() {
+        return DNI;
     }
 
-    public Long getCodigo() {
-        return codigo;
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
     }
 
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
+    public String getTransaccion() {
+        return transaccion;
     }
 
-    public String getApellidoMaterno() {
-        return apellidoMaterno;
+    public void setTransaccion(String transaccion) {
+        this.transaccion = transaccion;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getContact_date() {
+        return contact_date;
     }
 
-    public String getEmail() {
-        return email;
+    public void setContact_date(String contact_date) {
+        this.contact_date = contact_date;
     }
 
-    public String getDni() {
-        return dni;
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname1() {
+        return surname1;
+    }
+
+    public void setSurname1(String surname1) {
+        this.surname1 = surname1;
+    }
+
+    public String getSurname2() {
+        return surname2;
+    }
+
+    public void setSurname2(String surname2) {
+        this.surname2 = surname2;
     }
 
     public String getTelefono() {
         return telefono;
     }
 
-    public Date getFechaDeContacto() {
-        return fechaDeContacto;
-    }
-
-    public Date getFechaDePase() {
-        return fechaDePase;
-    }
-
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
-    }
-
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
-    }
-
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    public void setFechaDeContacto(Date fechaDeContacto) {
-        this.fechaDeContacto = fechaDeContacto;
-    }
-
-    public void setFechaDePase(Date fechaDePase) {
-        this.fechaDePase = fechaDePase;
-    }
-
+    
+    
+    
 }

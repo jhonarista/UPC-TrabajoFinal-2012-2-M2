@@ -12,9 +12,9 @@ import org.junit.BeforeClass;
  *
  * @author feral
  */
-public class AdminClienteTest {
+public class ClienteTest {
     
-    public AdminClienteTest() {
+    public ClienteTest() {
     }
     
     @BeforeClass
