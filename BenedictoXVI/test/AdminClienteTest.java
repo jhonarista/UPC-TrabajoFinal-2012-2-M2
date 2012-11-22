@@ -21,9 +21,9 @@ public class AdminClienteTest {
     @Test
     public void validarElFuncionamientoPorNombre(){
     
-        String validar = admCliente.buscarClientePorNombre("Hernan");
+        String validar = admCliente.buscarClientePorNombre("Luis");
         System.out.println(validar);
-        Assert.assertEquals("Hernan", validar);
+        Assert.assertEquals("Luis", validar);
     }
     
  

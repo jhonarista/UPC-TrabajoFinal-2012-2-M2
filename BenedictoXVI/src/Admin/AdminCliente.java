@@ -27,39 +27,37 @@ public class AdminCliente {
     
     public String buscarClientePorNombre(String name){
     
-        tablaDeClientes();
+    
+        tablaDeClientes();   
         
         if(name.equals("")){
-            
             name = "No busque nada";
-            
             resultBusqueda = "Debe ingresar datos a buscar";
+        }
+     
+        cadena = name.substring(0,1).toUpperCase() + name.substring(1, name.length());
         
-            cadena = name.substring(0,1).toUpperCase() + name.substring(1, name.length());   
-           
-         int longitud = datos.size();
-                
+        int longitud = datos.size();
+        
             for(int i = 0; i<longitud;i++){
                
                 String NombreBuscado = datos.get(i).getName();
-             
+               
                 if (NombreBuscado.equals(cadena)){
-                    
-                }
+                  
                     db_Temp.add(datos.get(i));
-                    
+            
                 resultBusqueda = datos.get(i).getName();
                 
-                      }
+                }
             }
-        
-        if (db_Temp.size()>0){
+           
+                if (db_Temp.size()>0){
                     for (int j=0; j<db_Temp.size();j++){
                         System.out.println("SU BÚSQUEDA POR NOMBRE MUESTRA LOS SIGUIENTES RESULTADOS\t" + "\n");
-        
-        mostrar(j);
                         
-          }
+                        mostrar(j);
+                    }
                 }else{
                 resultBusqueda = "No se encontraron registros para los filtros ingresados";
                 }
@@ -69,9 +67,9 @@ public class AdminCliente {
     
         public String buscarClientePorDNI(String DNI){
         
-        //##########################CARGA_BASE DE DATOS#############
+   
         tablaDeClientes();
-        //##########################INGRESO_VACIO###################
+ 
         if(DNI.equals("")){
             DNI = "No busque nada";
             return resultBusqueda = "Debe ingresar datos a buscar";
