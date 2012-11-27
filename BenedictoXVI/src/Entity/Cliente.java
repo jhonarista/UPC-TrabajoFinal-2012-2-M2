@@ -5,19 +5,19 @@ import java.util.Date;
 public class Cliente {
     
      
-    private String name;
-    private String surname1;
-    private String surname2;
+    private String nombre;
+    private String apellidoPaterno;
+    private String apellidoMaterno;
     private String mail;
     private String DNI;
     private String telefono;
     private String contact_date;
     private String transaccion;
     
-    public Cliente (String name, String surname1, String surname2, String mail, String DNI, String telefono, String contact_date, String transaccion) {
-        this.name = name;
-        this.surname1 = surname1;
-        this.surname2 = surname2;
+    public Cliente (String nombre, String apellidoPaterno, String apellidoMaterno, String mail, String DNI, String telefono, String contact_date, String transaccion) {
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
         this.mail = mail;
         this.DNI = DNI;
         this.telefono = telefono;
@@ -62,28 +62,28 @@ public class Cliente {
         this.mail = mail;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getSurname1() {
-        return surname1;
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
     }
 
-    public void setSurname1(String surname1) {
-        this.surname1 = surname1;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
-    public String getSurname2() {
-        return surname2;
+    public String getApellidoMaterno() {
+        return apellidoMaterno;
     }
 
-    public void setSurname2(String surname2) {
-        this.surname2 = surname2;
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
     }
 
     public String getTelefono() {

@@ -25,29 +25,30 @@ public class AdminCliente {
     ArrayList<Cliente> db_Temp = new ArrayList<Cliente>();
     ArrayList<Cliente> db_Temp2 = new ArrayList<Cliente>();
     
-    public String buscarClientePorNombre(String name){
+    
+    public String buscarClientePorNombre(String nombre){
     
     
         tablaDeClientes();   
         
-        if(name.equals("")){
-            name = "No busque nada";
+        if(nombre.equals("")){
+            nombre = "No busque nada";
             resultBusqueda = "Debe ingresar datos a buscar";
         }
      
-        cadena = name.substring(0,1).toUpperCase() + name.substring(1, name.length());
+        cadena = nombre.substring(0,1).toUpperCase() + nombre.substring(1, nombre.length());
         
         int longitud = datos.size();
         
             for(int i = 0; i<longitud;i++){
                
-                String NombreBuscado = datos.get(i).getName();
+                String NombreBuscado = datos.get(i).getNombre();
                
                 if (NombreBuscado.equals(cadena)){
                   
                     db_Temp.add(datos.get(i));
             
-                resultBusqueda = datos.get(i).getName();
+                resultBusqueda = datos.get(i).getNombre();
                 
                 }
             }
@@ -102,9 +103,9 @@ public class AdminCliente {
         tablaDeClientes();
         
         System.out.println("DNI: \t" + "\t" + "\t" + db_Temp.get(indice).getDNI());
-        System.out.println("Nombre: \t" + "\t" + db_Temp.get(indice).getName());
-        System.out.println("Apellido Paterno: \t" + db_Temp.get(indice).getSurname1());
-        System.out.println("Apellido Materno: \t" + db_Temp.get(indice).getSurname2());
+        System.out.println("Nombre: \t" + "\t" + db_Temp.get(indice).getNombre());
+        System.out.println("Apellido Paterno: \t" + db_Temp.get(indice).getApellidoPaterno());
+        System.out.println("Apellido Materno: \t" + db_Temp.get(indice).getApellidoMaterno());
         System.out.println("Email: \t" + "\t" + "\t" + db_Temp.get(indice).getMail());
         System.out.println("Fecha de contacto: \t" + db_Temp.get(indice).getContact_date());
         System.out.println("Telefono: \t" + "\t" + db_Temp.get(indice).getTelefono());
