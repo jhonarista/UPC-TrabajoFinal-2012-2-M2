@@ -66,7 +66,43 @@ public class AdminCliente {
                                             
 }
     
-        public String buscarClientePorDNI(String DNI){
+    public String buscarClientePorApellidoPaterno(String apellidoPaterno){
+        
+       
+        tablaDeClientes();
+        
+       
+        if(apellidoPaterno.equals("")){
+            apellidoPaterno = "No busque nada";
+            resultBusqueda = "Debe ingresar datos a buscar";
+        }
+        //##########################CONVIRTIENDO A MAYUSCULA################################
+        cadena = apellidoPaterno.substring(0,1).toUpperCase() + apellidoPaterno.substring(1, apellidoPaterno.length());
+        int longitud = datos.size();
+            for(int i = 0; i<longitud;i++){
+            
+                String PaternoBuscado = datos.get(i).getApellidoPaterno();
+           
+                if (PaternoBuscado.equals(cadena)){
+                
+                    db_Temp.add(datos.get(i));
+                    
+                resultBusqueda = datos.get(i).getApellidoPaterno();
+                
+                }
+            }
+                if (db_Temp.size()>0){
+                    for (int j=0; j<db_Temp.size();j++){
+                        System.out.println("SU BÚSQUEDA POR APELLIDO PATERNO MUESTRA LOS SIGUIENTES RESULTADOS\t" + "\n");
+                        mostrar(j);
+                    }
+                }else{
+                resultBusqueda = "No se encontraron registros para los filtros ingresados";
+                }
+        return resultBusqueda;    
+    }
+       
+     public String buscarClientePorDNI(String DNI){
         
    
         tablaDeClientes();

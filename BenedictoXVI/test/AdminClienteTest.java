@@ -26,7 +26,14 @@ public class AdminClienteTest {
         Assert.assertEquals("Jhon", validar);
     }
     
- 
+   @Test
+   public void validarElFuncionamientoPorApellidoPaterno(){
+    
+        
+       String validar = admCliente.buscarClientePorApellidoPaterno("Arista");
+        System.out.println(validar);
+        Assert.assertEquals("Arista", validar);
+    }
   
      @Test
     public void validarElFuncionamientoPorDNI(){
