@@ -35,6 +35,15 @@ public class AdminClienteTest {
         System.out.println(validar);
         Assert.assertEquals("Arista", validar);
     }
+   
+    @Test
+    public void validarElFuncionamientoDelBotonBuscarPorApellidoMaterno(){
+    
+        
+         String validar = admCliente.buscarClientePorApellidoMaterno("Apolinario");
+         System.out.println(validar);
+        Assert.assertEquals("Apolinario", validar);
+    }
   
      @Test
     public void validarElFuncionamientoPorDNI(){
