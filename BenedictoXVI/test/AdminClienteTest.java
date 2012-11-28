@@ -1,4 +1,3 @@
-package Admin;
 
 /*
  * To change this template, choose Tools | Templates
