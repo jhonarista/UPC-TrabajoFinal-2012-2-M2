@@ -44,14 +44,32 @@ public class AdminClienteTest {
          System.out.println(validar);
         Assert.assertEquals("Apolinario", validar);
     }
+    
+    @Test
+       public void validarElFuncionamientoDelBotonBuscarPorCorreo(){
+          
+        String validar = admCliente.buscarClientePorCorreo("jhonarista@gmail.com");
+        System.out.println(validar);
+        Assert.assertEquals("jhonarista@gmail.com", validar);
+    }
   
      @Test
     public void validarElFuncionamientoPorDNI(){
     
        
-        String validar = admCliente.buscarClientePorDNI("59038572");
+        String validar = admCliente.buscarClientePorDNI("2643768");
         System.out.println(validar);
-        Assert.assertEquals("59038572", validar);
+        Assert.assertEquals("2643768", validar);
+    }
+     
+     @Test
+     public void validarElFuncionamientoDelBotonBuscarPorTelefono(){
+    
+        
+        String validar = admCliente.buscarClientePorTelefono("2258849");
+        System.out.println(validar);
+        Assert.assertEquals("2258849", validar);
     }
 
 }
+     
