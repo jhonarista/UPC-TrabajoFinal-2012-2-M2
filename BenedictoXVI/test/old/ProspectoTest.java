@@ -1,7 +1,7 @@
-package Admin;
+package old;
 
 
-import Entity.Prospecto;
+import Entity.old.Prospecto;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

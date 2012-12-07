@@ -138,39 +138,6 @@ public class AdminCliente {
         return resultBusqueda;    
     }
     
-    public String buscarClientePorCorreo(String mail){
-        
-        tablaDeClientes();
-        
-        if(mail.equals("") || !mail.contains("@")){
-            mail = "No busque nada";
-            return resultBusqueda = "Debe ingresar datos a buscar y asegurese que el campo correo este bien escrito";
-        }
-        
-        int longitud = datos.size();
-            for(int i = 0; i<longitud;i++){
-            
-                String MailBuscado = datos.get(i).getMail();
-           
-                if (MailBuscado.equals(mail)){
-                
-                    db_Temp.add(datos.get(i));
-                    
-                resultBusqueda = datos.get(i).getMail();
-                
-                }
-            }
-                if (db_Temp.size()>0){
-                    for (int j=0; j<db_Temp.size();j++){
-                        System.out.println("SU BÚSQUEDA POR MAIL MUESTRA LOS SIGUIENTES RESULTADOS\t" + "\n");
-                        mostrar(j);
-                    }
-                }else{
-                resultBusqueda = "No se encontraron registros para los filtros ingresados";
-                }
-        return resultBusqueda;    
-    }
-    
      public String buscarClientePorDNI(String DNI){
         
    
@@ -204,73 +171,6 @@ public class AdminCliente {
                 }
         return resultBusqueda;    
     }
-     
-      public String buscarClientePorTelefono(String telefono){
-
-        tablaDeClientes();
-        
-        if(telefono.equals("")){
-            telefono = "No busque nada";
-            return resultBusqueda = "Debe ingresar datos a buscar";
-        }
-        
-        int longitud = datos.size();
-            for(int i = 0; i<longitud;i++){
-            
-                String TelefonoBuscado = datos.get(i).getTelefono();
-           
-                if (TelefonoBuscado.equals(telefono)){
-                
-                    db_Temp.add(datos.get(i));
-                    
-                resultBusqueda = datos.get(i).getTelefono();
-                
-                }
-            }
-                if (db_Temp.size()>0){
-                    for (int j=0; j<db_Temp.size();j++){
-                        System.out.println("SU BÚSQUEDA POR TELEFONO MUESTRA LOS SIGUIENTES RESULTADOS\t" + "\n");
-                        mostrar(j);
-                    }
-                }else{
-                resultBusqueda = "No se encontraron registros para los filtros ingresados";
-                }
-        return resultBusqueda;    
-    }
-    
-    public String buscarClientePorFecha(String fecha){
-        
-        tablaDeClientes();
-       
-        if(fecha.equals("")){
-            fecha = "No busque nada";
-            return resultBusqueda = "Debe ingresar datos a buscar";
-        }
-        
-        int longitud = datos.size();
-            for(int i = 0; i<longitud;i++){
-            
-                String FechaBuscado = datos.get(i).getContact_date();
-           
-                if (FechaBuscado.equals(fecha)){
-                
-                    db_Temp.add(datos.get(i));
-                    
-                resultBusqueda = datos.get(i).getContact_date();
-                
-                }
-            }
-                if (db_Temp.size()>0){
-                    for (int j=0; j<db_Temp.size();j++){
-                        System.out.println("SU BÚSQUEDA POR FECHA DE CONTACTO MUESTRA LOS SIGUIENTES RESULTADOS\t" + "\n");
-                        mostrar(j);
-                    }
-                }else{
-                resultBusqueda = "No se encontraron registros para los filtros ingresados";
-                }
-        return resultBusqueda;    
-    }
-      
     public void mostrar(int indice){
         tablaDeClientes();
         
