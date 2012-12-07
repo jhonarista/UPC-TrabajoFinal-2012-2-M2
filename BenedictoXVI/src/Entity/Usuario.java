@@ -18,10 +18,10 @@ public class Usuario {
     private String fecha;
     private String posicion;
     private String rol;
-    private String contraseña;
+    private String contrasenha;
     private boolean mover;
 
-    public Usuario(String codigo, String nombre, String apellidoPaterno, String apellidoMaterno, String nombreUsuario, String mail, String fecha, String posicion, String rol, String contraseña) {
+    public Usuario(String codigo, String nombre, String apellidoPaterno, String apellidoMaterno, String nombreUsuario, String mail, String fecha, String posicion, String rol, String contrasenha) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -31,7 +31,7 @@ public class Usuario {
         this.fecha = fecha;
         this.posicion = posicion;
         this.rol = rol;
-        this.contraseña = contraseña;
+        this.contrasenha = contrasenha;
     }
 
     public String getCodigo() {
@@ -66,12 +66,12 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenha() {
+        return contrasenha;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenha(String contrasenha) {
+        this.contrasenha = contrasenha;
     }
 
     public String getPosicion() {
