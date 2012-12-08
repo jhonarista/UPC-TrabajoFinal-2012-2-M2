@@ -23,4 +23,4 @@ http://www.scrumy.com/belated30dagger
 
 - Documentacion
 
-https://docs.google.com/file/d/0B4AsSvoNZyZtWTVuVk5QWWtmVW8/edit?pli=1
+https://docs.google.com/document/d/1V6TBIlrTWI7Eal6IXgOCVCyftMl292sWoINAVuL9vWk/edit
