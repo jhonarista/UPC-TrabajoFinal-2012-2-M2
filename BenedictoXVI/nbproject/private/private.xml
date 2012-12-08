@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/E:/BenedictoXVI/src/Admin/AdminCliente.java</file>
+        <file>file:/E:/BenedictoXVI/src/Admin/AdminUsuario.java</file>
+        <file>file:/E:/BenedictoXVI/src/Admin/AdminProspecto2.java</file>
+        <file>file:/E:/BenedictoXVI/src/Entity/Permiso.java</file>
+        <file>file:/E:/BenedictoXVI/src/Entity/entity.java</file>
+        <file>file:/E:/BenedictoXVI/src/Entity/Usuario.java</file>
+        <file>file:/E:/BenedictoXVI/test/ClienteTest.java</file>
+        <file>file:/E:/BenedictoXVI/test/LoginTest.java</file>
+        <file>file:/E:/BenedictoXVI/test/ProspectoTest.java</file>
+        <file>file:/E:/BenedictoXVI/src/Admin/ccc.java</file>
+    </open-files>
 </project-private>
