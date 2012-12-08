@@ -18,7 +18,7 @@ public class AdminClienteTest {
     
     AdminCliente admCliente = new AdminCliente();
     
-  
+  /*
     @Test
     public void validarElFuncionamientoPorNombre(){
     
@@ -53,5 +53,37 @@ public class AdminClienteTest {
         System.out.println(validar);
         Assert.assertEquals("59038572", validar);
     }
+     
+    
+      @Test
+      public void validarElFuncionamientoPorTelefono(){
+    
+        
+         String validar = admCliente.buscarClientePorTelefono("2258849");
+         System.out.println(validar);
+         Assert.assertEquals("2258849", validar);
+     }
+    
+      @Test
+     public void validarElFuncionamientoPorFechaDeContacto(){
+    
+         String validar = admCliente.buscarClientePorFecha("19/04/2012");
+        System.out.println(validar);
+        Assert.assertEquals("19/04/2012", validar);
+     }
+   */
+      @Test
+    public void validarElFuncionamientoDelBotonNuevo(){
+       
+        int validar = admCliente.agregarCliente("Cesar", "Meneses", "Medina", "cmeneses@gmail.com", "70670398", "5337667", "10/03/2012", "no");
+        Assert.assertEquals(0, validar);
+    }
+    /*
+      @Test
+      public void validarElFuncionamientoDelBotonEliminar(){
+        
+        int validar = admCliente.eliminarCliente("59038572");
+        Assert.assertEquals(1, validar);
+    }*/
 
 }
