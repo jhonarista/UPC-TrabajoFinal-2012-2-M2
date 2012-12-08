@@ -102,7 +102,7 @@ public class Usuario {
         return apellidoMaterno;
     }
 
-    public void setApellidoMaterno(String apellidoPaterno) {
+    public void setApellidoMaterno(String apellidoMaterno) {
         this.apellidoMaterno = apellidoMaterno;
     }
 
