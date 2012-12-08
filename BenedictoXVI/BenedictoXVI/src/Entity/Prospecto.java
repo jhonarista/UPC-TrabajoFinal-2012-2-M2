@@ -1,9 +1,7 @@
 
 package Entity;
 
-//import java.util.GregorianCalendar;
-
-public class Prospecto2 {
+public class Prospecto {
     private String nombres;
     private String apellidoPaterno;
     private String apellidoMaterno;
@@ -11,11 +9,9 @@ public class Prospecto2 {
     private String dni;
     private String telefono;
     private String fechaContacto;
-    private boolean esCliente;// NO LO ESTOY UTILIZANDO???
-    
-    //GregorianCalendar miCalendario = new GregorianCalendar();
+    private boolean esCliente;
 
-    public Prospecto2(String nombres, String apellidoPaterno, String apellidoMaterno, String correo, String dni, String telefono, String fechaContacto) {
+    public Prospecto(String nombres, String apellidoPaterno, String apellidoMaterno, String correo, String dni, String telefono, String fechaContacto) {
         this.nombres = nombres;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
@@ -23,11 +19,8 @@ public class Prospecto2 {
         this.dni = dni;
         this.telefono = telefono;
         this.fechaContacto = fechaContacto;
-        this.esCliente = false; //no lo utilizo en el constructor???
+        this.esCliente = false; 
     }
-    
-    //public Prospecto2(){
-    //}//para qeu lo construyo vacio???
 
     public String getNombres() {
         return nombres;

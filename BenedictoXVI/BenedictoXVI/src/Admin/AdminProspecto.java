@@ -1,32 +1,29 @@
 package Admin;
 
 import Entity.Cliente;
-import Entity.Prospecto2;
+import Entity.Prospecto;
 import java.util.ArrayList;
 
-public class AdminProspecto2 {
-    private ArrayList<Prospecto2> misDatos = new ArrayList<Prospecto2>();
+public class AdminProspecto {
+    private ArrayList<Prospecto> misDatos = new ArrayList<Prospecto>();
     private String miCadena1;
-    //private String miCadena2;
     private String miResultadoBusqueda = "";
-    //private int miIndice;
     AdminCliente clientes = new AdminCliente();
     ArrayList<Cliente> db_Cliente = new ArrayList<Cliente>();
-    ArrayList<Prospecto2> miTemporal = new ArrayList<Prospecto2>();
+    ArrayList<Prospecto> miTemporal = new ArrayList<Prospecto>();
     
-    public ArrayList<Prospecto2> tablaDeProspectos(){
-        this.misDatos.add(new Prospecto2("Victor", "Villa", "Vila", "vvilla@hotmail.com", "1", "998526288", "20/10/2012"));
-        this.misDatos.add(new Prospecto2("Victor", "Picapiedra", "Picapiedra", "ppicapiedra@hotmail.com", "2", "999999999", "01/01/2012"));
-        this.misDatos.add(new Prospecto2("Armando", "Yto", "Nakamoto", "ayto@hotmail.com", "3", "888888888", "10/10/2012"));
-        this.misDatos.add(new Prospecto2("Hector", "Chafloque", "Salinas", "hchafloque@hotmail.com", "4", "777777777", "05/05/2012"));
+    public ArrayList<Prospecto> tablaDeProspectos(){
+        this.misDatos.add(new Prospecto("Victor", "Villa", "Vila", "vvilla@hotmail.com", "10471398", "998526288", "20/10/2012"));
+        this.misDatos.add(new Prospecto("Victor", "Picapiedra", "Picapiedra", "ppicapiedra@hotmail.com", "2", "999999999", "01/01/2012"));
+        this.misDatos.add(new Prospecto("Armando", "Yto", "Nakamoto", "ayto@hotmail.com", "3", "888888888", "10/10/2012"));
+        this.misDatos.add(new Prospecto("Hector", "Chafloque", "Salinas", "hchafloque@hotmail.com", "4", "777777777", "05/05/2012"));
         return misDatos;
     }
     
- /*   public String buscarProspectoPorNombre(String elNombre){
+   public String buscarProspectoPorNombre(String elNombre){
         tablaDeProspectos();
         
         if (elNombre.equals("")){
-            //elNombre = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
         
@@ -37,7 +34,7 @@ public class AdminProspecto2 {
             String nombreEnArreglo = misDatos.get(x).getNombres();
             if(nombreEnArreglo.equals(miCadena1)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getNombres();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getNombres();
             }
         }
             if(miTemporal.size() > 0){
@@ -48,15 +45,13 @@ public class AdminProspecto2 {
             }else{
                 miResultadoBusqueda = "NO SE ENNCONTRO REGISTROS QUE COINCIDIERAN";
             }
-        
         return miResultadoBusqueda;
-    } */
+    }
     
-  /* public String buscarProspectoPorApellidoPaterno(String elApellido){
+   public String buscarProspectoPorApellidoPaterno(String elApellido){
         tablaDeProspectos();
         
         if (elApellido.equals("")){
-            //elNombre = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
         
@@ -67,7 +62,7 @@ public class AdminProspecto2 {
             String paternoEnArreglo = misDatos.get(x).getApellidoPaterno();
             if(paternoEnArreglo.equals(miCadena1)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getApellidoPaterno();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getApellidoPaterno();
             }
         }
             if(miTemporal.size() > 0){
@@ -80,13 +75,12 @@ public class AdminProspecto2 {
             }
         
         return miResultadoBusqueda;
-    }*/
+    }
     
-   /*  public String buscarProspectoPorApellidoMaterno(String elMaterno){
+     public String buscarProspectoPorApellidoMaterno(String elMaterno){
         tablaDeProspectos();
         
         if (elMaterno.equals("")){
-            //elNombre = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
         
@@ -97,7 +91,7 @@ public class AdminProspecto2 {
             String maternoEnArreglo = misDatos.get(x).getApellidoMaterno();
             if(maternoEnArreglo.equals(miCadena1)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getApellidoMaterno();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getApellidoMaterno();
             }
         }
             if(miTemporal.size() > 0){
@@ -110,18 +104,15 @@ public class AdminProspecto2 {
             }
         
         return miResultadoBusqueda;
-    }*/
+    }
     
-    /* public String buscarProspectoPorCorreo(String elCorreo){
+     public String buscarProspectoPorCorreo(String elCorreo){
         tablaDeProspectos();
         
         if (elCorreo.equals("") || !elCorreo.contains("@") ){
-            //elNombre = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             return miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR O ESCRIBIR CORRECTAMENTE EL CORREO!!!";
         }
-        
-        //miCadena1 = elMaterno.substring(0, 1).toUpperCase() + elMaterno.substring(1, elMaterno.length());
-        
+
         int tamannoArreglo = misDatos.size();
         for(int x = 0; x < tamannoArreglo; x++){
             String correoEnArreglo = misDatos.get(x).getCorreo();
@@ -140,24 +131,21 @@ public class AdminProspecto2 {
             }
         
         return miResultadoBusqueda;
-    }*/
+    }
     
      public String buscarProspectoPorDNI(String elDNI){
         tablaDeProspectos();
         
         if (elDNI.equals("")){
-            //elDNI = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             return miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
-        
-        //miCadena1 = elMaterno.substring(0, 1).toUpperCase() + elMaterno.substring(1, elMaterno.length());
-        
+  
         int tamannoArreglo = misDatos.size();
         for(int x = 0; x < tamannoArreglo; x++){
             String dniEnArreglo = misDatos.get(x).getDni();
             if(dniEnArreglo.equals(elDNI)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getDni();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getDni();
             }
         }
             if(miTemporal.size() > 0){
@@ -172,22 +160,19 @@ public class AdminProspecto2 {
         return miResultadoBusqueda;
     }
     
-    /* public String buscarProspectoPorTelefono(String elTelefono){
+     public String buscarProspectoPorTelefono(String elTelefono){
         tablaDeProspectos();
         
         if (elTelefono.equals("")){
-            //elDNI = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             return miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
-        
-        //miCadena1 = elMaterno.substring(0, 1).toUpperCase() + elMaterno.substring(1, elMaterno.length());
-        
+
         int tamannoArreglo = misDatos.size();
         for(int x = 0; x < tamannoArreglo; x++){
             String telefonoEnArreglo = misDatos.get(x).getTelefono();
             if(telefonoEnArreglo.equals(elTelefono)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getTelefono();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getTelefono();
             }
         }
             if(miTemporal.size() > 0){
@@ -200,24 +185,21 @@ public class AdminProspecto2 {
             }
         
         return miResultadoBusqueda;
-    }*/
+    }
     
-    /* public String buscarProspectoPorFecha(String laFecha){
+     public String buscarProspectoPorFecha(String laFecha){
         tablaDeProspectos();
         
         if (laFecha.equals("")){
-            //laFecha = "NO SE REALIZARON BUSQUEDAS"; PARA que es esto?
             return miResultadoBusqueda = "DEBE INGRESAR DATOS A BUSCAR!!!";
         }
-        
-        //miCadena1 = elMaterno.substring(0, 1).toUpperCase() + elMaterno.substring(1, elMaterno.length());
-        
+      
         int tamannoArreglo = misDatos.size();
         for(int x = 0; x < tamannoArreglo; x++){
             String fechaEnArreglo = misDatos.get(x).getFechaContacto();
             if(fechaEnArreglo.equals(laFecha)){
                 miTemporal.add(misDatos.get(x));
-                miResultadoBusqueda = misDatos.get(x).getFechaContacto();//aca para que se usa el nombre???
+                miResultadoBusqueda = misDatos.get(x).getFechaContacto();
             }
         }
             if(miTemporal.size() > 0){
@@ -230,9 +212,9 @@ public class AdminProspecto2 {
             }
         
         return miResultadoBusqueda;
-    }*/
+    }
     
-    /*public int agregarProspecto (String nombre, String apellidoPaterno, String apellidoMaterno, String correo, String dni, String telefono, String fechaContacto){
+    public int agregarProspecto (String nombre, String apellidoPaterno, String apellidoMaterno, String correo, String dni, String telefono, String fechaContacto){
         boolean nombreVacio = validarFormato(nombre);
         boolean apellidoPaternoVacio = validarFormato(apellidoPaterno);
         boolean correoVacio = validarFormato(correo);
@@ -242,7 +224,7 @@ public class AdminProspecto2 {
         tablaDeProspectos();
         db_Cliente = clientes.tablaDeClientes();
         
-        for(Prospecto2 prospecto :misDatos){
+        for(Prospecto prospecto :misDatos){
             if(prospecto.getDni().equals(dni)){
                 condicion = 1;
                 System.out.println("EL PROSPECTO YA EXISTE!!!");
@@ -262,7 +244,7 @@ public class AdminProspecto2 {
         }
         
         if (condicion == 0){
-            Prospecto2 nuevoProspecto = new Prospecto2(nombre, apellidoPaterno, apellidoMaterno, correo, dni, telefono, fechaContacto);
+            Prospecto nuevoProspecto = new Prospecto(nombre, apellidoPaterno, apellidoMaterno, correo, dni, telefono, fechaContacto);
             misDatos.add(nuevoProspecto);
             
             System.out.println("PROSPECTO AGREGADO CORRECTAMENTE");
@@ -278,9 +260,9 @@ public class AdminProspecto2 {
         }
         
         return condicion;
-    }*/
+    }
     
-   /* public int eliminarProspecto(String dni){
+    public int eliminarProspecto(String dni){
         int condicion = 0;
         tablaDeProspectos();
         
@@ -298,11 +280,11 @@ public class AdminProspecto2 {
             System.out.println("EL REGISTRO CON DNI " + dni + " NO FUE ELIMINADO!!!");
         }
         return condicion;
-    }*/
+    }
     
     public int actualizaProspecto(String nombre, String apellidoPaterno, String apellidoMaterno, String correo, String dni, String telefono, String fechaContacto ){
-        int validar = 0;//para que?
-        Prospecto2 p = new Prospecto2(nombre, apellidoPaterno, apellidoMaterno, correo, dni, telefono, fechaContacto);
+        int validar = 0;
+        Prospecto p = new Prospecto(nombre, apellidoPaterno, apellidoMaterno, correo, dni, telefono, fechaContacto);
         System.out.println(p.getNombres());
         String busqueda = buscarProspectoPorDNI(dni);
         
