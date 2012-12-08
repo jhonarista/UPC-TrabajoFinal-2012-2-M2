@@ -88,24 +88,10 @@ public class AdminProspecto2Test {
     public void validarBotonAcualizarProspecto(){
         AdminProspecto2 miAdmProspecto = new AdminProspecto2();
         int validar = miAdmProspecto.actualizaProspecto("z", "z", "z", "z@zzz.com", "z", "z", "z");
-        //System.out.println("FILTRO POR FECHA DE CONTACTO BUSCADO: " + validar);
+        System.out.println("FILTRO POR FECHA DE CONTACTO BUSCADO: " + validar);
         Assert.assertEquals(0, validar);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+  
 
 }
